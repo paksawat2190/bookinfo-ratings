@@ -15,17 +15,10 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          ...
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ghcr.io/paksawat2190/bookinfo-raings:dev/app:latest
-          ...
+          tags: ghcr.io/paksawat2190/bookinfo-raings:dev
 
-
-
-      - run: docker build -t ghcr.io/paksawat2190/bookinfo-ratings:dev .
-      - run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-      - run: docker push ghcr.io/paksawat2190/bookinfo-ratings:dev
-#test1
+     #test1

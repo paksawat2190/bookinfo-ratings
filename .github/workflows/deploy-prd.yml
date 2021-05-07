@@ -40,5 +40,6 @@ jobs:
     needs: deploy-prd
     runs-on: ubuntu-20.04
     steps:
-      - name: curl 
-        run: curl http://bookinfo.opsta.net/student71/ratings/health | grep "Ratings is working!!!"
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - run: curl http://bookinfo.opsta.net/student71/ratings/health | grep "Ratings is working"

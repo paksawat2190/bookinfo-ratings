@@ -24,7 +24,7 @@ jobs:
         with:
           helm: helm3
           release: bookinfo-prd-ratings
-          namespace: student71-bookinfo-prd
+          namespace: student119-bookinfo-prd
           chart: k8s/helm
           value-files: k8s/helm-values/values-bookinfo-prd-ratings.yaml
           values: |
@@ -40,6 +40,5 @@ jobs:
     needs: deploy-prd
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - run: curl http://bookinfo.opsta.net/student71/ratings/health | grep "Ratings is working"
+      - name: Acceptance Test
+        run: curl http://bookinfo.opsta.net/student71/ratings/health | grep "Ratings is working"

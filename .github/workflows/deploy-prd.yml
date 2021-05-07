@@ -42,4 +42,4 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - run: curl http://bookinfo.opsta.net/student86/ratings/health | grep "Ratings is working"
+      - run: curl http://bookinfo.opsta.net/student71/ratings/health | grep "Ratings is working"

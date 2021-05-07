@@ -8,7 +8,7 @@ ratings:
   healthCheckPath: "/health"
   mongodbPasswordExistingSecret: bookinfo-prd-ratings-mongodb-secret
 ingress:
-  host: bookinfo.prd.opsta.net
+  host: bookinfo.opsta.net
   path: "/student71/ratings(/|$)(.*)"
   serviceType: ClusterIP
   annotations:
